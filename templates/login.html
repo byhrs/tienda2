@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+    {%block titulo%}
+    Iniciar Sesion
+    {%endblock%}
+{%block contenido%}
+    <h1>BIENVENIDA, INGRESA TUS DATOS</h1>
+    <form action="/validar" method="post">
+        <p><b>INGRESA TU CORREO</b>
+        <input type="email" name="correo" id=""></p>
+        <p><b>INGRESA TU CONTRASEÑA</b>
+        <input type="password" name="contrasena" id=""></p>
+        <input type="submit" value="Iniciar">
+    </form>
+    <a class="btn success" href="/registrarUsuario">REGISTRARME</a>
+    <p>{{aviso}}</p>
+{%endblock%}

@@ -1,0 +1,67 @@
+.tituloHeader{
+    color:white;
+    font-size:30px;
+    font-weight:bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+header{
+    background: rgb(78, 67, 233);
+    background-image: url('../img/logotienda.ico.png');
+    background-size: contain;
+    background-repeat:no-repeat;
+    height: 50%;
+    margin: 0%;
+    padding-top:1%;
+    padding-bottom: 1%;
+    padding-left: 30%;
+}
+
+.linkButton{
+    background:rgb(131, 185, 235);
+    text-decoration-color: white;
+}
+table{
+    background:rgb(159, 197, 241);
+}
+h1{
+    color:rgb(13, 13, 14);
+    font-size:15px;
+    font-weight: bold;
+    text-align: center;
+}
+body{
+    background-image: url('../img/fondo\ azul.jpg');
+    background-size: cover;
+    ima
+}
+background-image{
+    opacity: 0.2;
+}
+
+.btn {
+    border: none; 
+    color: white; 
+    padding: 8px 8px; 
+    cursor: pointer; 
+    border-radius: 1px; 
+  }
+  
+  .primary {background-color: rgb(94, 19, 19); border: 2px solid #007bff;} 
+  .primary:hover {background: #0b7dda; color: white;}
+  
+  .secondary {background-color: rgb(146, 124, 124); border: 2px solid #e7e7e7;} 
+  .secondary:hover {background: #ddd; color: white;}
+  
+  .success {background-color: #60cf64; border: 2px solid #04AA6D;} 
+  .success:hover {background-color: #46a049; color: white;}
+  
+  .warning {background-color: #db9a38; border: 2px solid #ff9800;} 
+  .warning:hover {background: #e68a00; color: white;}
+  
+  .danger {background-color: white; border: 2px solid #f44336;} 
+  .danger:hover {background: #da190b; color: white;}
+  
+  .tituloHeader {
+    font-family: 'rastanty cortez', cursive;
+}
+

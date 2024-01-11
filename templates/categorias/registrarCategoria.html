@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+    {%block titulo%}
+        modulo de registro de categoria
+    {%endblock%}
+
+{%block contenido%}
+    <h1>REGISTRAR NUEVA CATEGORIA</h1>
+    <form action="/registrarCategoria" method="post"
+    enctype="multipart/form-data">
+        <p><b>INGRESA EL NOMBRE DE LA CATEGORIA</b> 
+        <input type="text" name="nombreCat" id=""></p>
+        <p><b>IMAGEN</b>
+        <input type="file" name="imagenCat" id="">
+        </p>
+        <input type="submit" value="REGISTRAR">
+    </form>
+{%endblock%}

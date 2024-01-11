@@ -1,0 +1,46 @@
+{% extends 'base.html'%}
+    {%block titulo%}  
+    Productos
+    {%endblock%}
+{%block contenido%} 
+    <h1>PRODUCTOS DISPONIBLES</h1>
+    <div class="container">
+    <table class="table">
+        <thead>
+            <th>NUMERO</th>
+            <th>NOMBRE DEL PRODUCTO</th>
+            <th>DESCRIPCION</th>
+            <th>PRECIO</th>
+            <th>IMAGEN</th>
+            <th>EXISTENCIAS</th>
+            <th>ACTUALIZAR</th>
+            <th>ELIMINAR</th>
+        </thead>
+        {%for j in games %}
+        <tr>
+            <td>{{j.id_juego}}</td>
+            <td>{{j.nombre}}</td>
+            <td>{{j.descripcion}}</td>
+            <td>{{j.precio}}</td>            
+            <td>
+                <img src="/juegos/consultarImagen/{{j.id_juego}}"
+                 alt="imagen del juego" width="80px" height="80px">
+            </td>
+            <td>{{j.existencia}}</td>
+            <td>
+            <button class="btn primary" onclick="window.location.href='/actualizarJuego/{{j.id_juego}}'">Actualizar</button>
+            </td>
+            <td>
+            <button class="btn warning" onclick="eliminarJuego({{j.id_juego}})">Eliminar</button>
+            </td>            
+        </tr>
+        {%endfor%}
+    </table>
+    <button class="btn warning" onclick="window.location.href='/registrarJuego'">REGISTRAR PRODUCTO NUEVO</button>
+    <br>
+    <a href="/regresar" class="btn success">REGRESAR</a>
+    <br>
+    <div class="modal-footer">
+    </div>
+    <script src="{{url_for('static',filename='js/juegos.js')}}"></script>
+{%endblock%} 

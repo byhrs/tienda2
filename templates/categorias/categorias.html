@@ -1,0 +1,37 @@
+{% extends 'base.html'%}
+    {%block titulo%}  
+    Categorias
+    {%endblock%}
+{%block contenido%}     
+    <h1>CATEGORIAS DISPONIBLES</h1>   
+    <div class="container">
+    <table class="table">
+        <thead>
+            <th>NUMERO</th>
+            <th>NOMBRE DE LA CATEGORIA</th>
+            <th>IMAGEN</th>
+            <th>ACTUALIZAR</th>
+            <th>ELIMINAR</th>
+        </thead>
+        {%for c in cate %}
+        <tr>
+            <td>{{c.id_categoria}}</td>
+            <td>{{c.nombre}}</td>
+            <td>
+                <img src="/categorias/consultarImagen/{{c.id_categoria}}"
+                 alt="imagen de la categoria" width="80px" height="80px">
+        </td>
+            <td>
+                <button class="btn primary" onclick="window.location.href='/actualizarCategoria/{{c.id_categoria}}'">ACTUALIZAR</button>
+            </td>            
+            <td>
+                <button class="btn warning" onclick="eliminarCategoria({{c.id_categoria}})">ELIMINAR</button>
+            </td>
+        </tr>
+        {%endfor%}
+    </table>
+    <button class="btn warning" onclick="window.location.href='/registrarCategoria'">REGISTRAR NUEVA CATEGORIA</button>
+    <br>
+    <a href="/regresar" class="btn success">REGRESAR</a>
+    </div>
+{%endblock%} 

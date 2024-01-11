@@ -1,0 +1,40 @@
+{% extends 'base.html'%}
+    {%block titulo%}
+        modulo de registro de producto
+    {%endblock%}
+
+{%block contenido%}
+    <h1>REGISTRANDO PRODUCTO NUEVO</h1>
+    <form action="/registrarJuego" method="post" enctype="multipart/form-data">
+        <p>
+            <label for="categoria">ELIGE LA CATEGORIA 
+            <select name="categoria" id="categoria">
+                {%for cate  in cates %}
+                <option value="{{cate.id_categoria}}">{{cate.nombre}}</option>  
+                 {%endfor%}     
+            </select>
+        </p>
+        <p>
+                <label for="nombreJuego">NOMBRE DEL NUEVO PRODUCTO</label>
+                <input type="text" class="form-control" id="nombreJuego" placeholder="NOMBRE" name="nombreJuego">
+            </p>
+            <p>
+                <label for="descJuego">DESCRIPCION DEL NUEVO PRODUCTO </label>
+                <input type="text" class="form-control" id="descJuego" placeholder="DESCRIPCION" name="descJuego">
+            </p>
+            <p>
+                <label for="precioJuego">PRECIO DEL PRODUCTO </label>
+                <input type="number" class="form-control" id="precioJuego" placeholder="PRECIO" name="precioJuego">
+            </p>
+            <p>
+                <label for="existJuego">EXISTENCIAS DEL PRODUCTO</label>
+                <input type="number" class="form-control" id="existJuego" placeholder="EXISTENCIAS" name="existJuego">
+            </p>
+            <p>
+                <label for="imagenJuego">IMAGEN DEL PRODUCTO </label>
+                <input type="file" class="form-control" id="imagenJuego" name="imagenJuego">
+            </p>
+        </div>
+        <button type="submit" class="btn btn-primary">GUARDAR PRODUCTO</button>
+    </form>
+{%endblock%}

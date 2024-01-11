@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+    {%block titulo%}
+     modulo de actualizaion de categoria
+    {%endblock%}
+{%block contenido%}
+    <h1>ACTUALIZANDO CATEGORIA </h1>
+    <form action=" /actualizarCategoria/{{cat.id_categoria}}" method="post"  
+    enctype="multipart/form-data">
+        <p><b>INGRESA EL NOMBRE DE LA CATEGORIA</b>
+    <input type="text" name="nombreCat" id="" value="{{cat.nombre}}"></p>
+        <p>
+         <b>INGRESA EL NOMBRE DE LA CATEGORIA</b>
+            <input type="file" name="imagenCat" 
+            value="/categorias/consultarImagen/{{cat.id_categoria}}" id="">
+        </p>
+        <input type="submit" value="-ACTUALIZAR-">
+    </form>
+{%endblock%}
